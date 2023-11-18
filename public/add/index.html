@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Content</title>
+    <link rel="stylesheet" href="../main.css">
+</head>
+<body>
+    <h1 class="title">Add Content</h1>
+    <form action="/add-content" method="post">
+        <select class="fileSelect" name="subjectName">
+            <option value="" selected disabled>Select Subject</option>
+            <option value="retal">Retal</option>
+            <option value="arabic">Arabic</option>
+        </select>
+        <select class="unitSelection" name="unitSelection">
+            <option value="" selected disabled>Select Unit</option>
+        </select>
+        <input type="text" name="lessonName" required placeholder="New Lesson Name" class="lessonName">
+        <textarea name="lessonContent">Write New Lesson Content</textarea>
+        <input type="submit" value="Submit">
+    </form>
+    <script src="https://cdn.tiny.cloud/1/z8v62mslqg7upmx8e238jzphycdj659fshmgc3j4dwfkr5e5/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        });
+    </script>
+    <script src="add.js"></script>
+</body>
+</html>
+
+
+

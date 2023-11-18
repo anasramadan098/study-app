@@ -1,0 +1,17 @@
+[
+    {
+        "unitName": "Unit one",
+        "Lessons": ["a"],
+        "content" : {"a":"a Content"}
+    } ,
+    {
+        "unitName": "Unit Two",
+        "Lessons": [],
+        "content" : {}
+    } ,
+    {
+        "unitName": "Unit Three",
+        "Lessons": [],
+        "content" : {}
+    }
+]

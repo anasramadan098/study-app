@@ -223,7 +223,7 @@ textarea {
 @media (max-width:767px) {
     body,
     .boxes {
-        padding: 10px;
+        padding: 0;
     }
     .excersice-step h2,
     .result h3 {
@@ -236,8 +236,5 @@ textarea {
     }
     .result {
         padding: 10px;
-    }
-    .box {
-        width:100%
     }
 }

@@ -47,8 +47,8 @@ app.post('/add-content',(req,res) => {
 
     // Write The New Data To The File
     fs.writeFileSync(`./public/files/${subject}.json`,JSON.stringify(newData));
-    res.redirect(`./subjects/${subject}/index.html`);
-})
+    res.redirect(`./subjects/${subject}`);
+}) 
 const subjects = [
     `arabic`,
     `computer`,
@@ -126,6 +126,33 @@ app.post('/edit',(req,res) => {
     res.send(data);
 })
 
+
+
+app.get('/subjects/:subjectName',(req,res) => {
+
+    const param = req.params.subjectName;
+
+    const code = `
+        <!DOCTYPE html>
+        <html lang="ar">
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>${param}</title>
+                <link rel="stylesheet" href="../../main.css">
+            </head>
+            <body dir="rtl">
+                <div class="boxes">
+                </div>
+                <script src="../../subject.js"></script>
+            </body>
+        </html>
+    `
+
+    res.send(code);
+
+})
 
 app.listen('3000' , ()=> {
     console.log('LISTENED ON 3000 PORT');
